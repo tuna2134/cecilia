@@ -1,4 +1,17 @@
 import Image from "next/image";
+import { Github, X } from "iconoir-react";
+import Link from "next/link";
+
+const SNSIcons = [
+    {
+        url: "https://github.com/tuna2134",
+        icon: Github,
+    },
+    {
+        url: "https://x.com/@fdc_tuna2134",
+        icon: X,
+    },
+];
 
 const Header: React.FC = async () => {
     const res = await fetch(
@@ -22,6 +35,13 @@ const Header: React.FC = async () => {
                     className="mb-2 rounded-full"
                 />
                 <h1 className="text-2xl font-bold text-center">tuna2134</h1>
+                <div className="flex justify-center space-x-2 mt-2">
+                    {SNSIcons.map((sns, key) => (
+                        <Link href={sns.url} key={key}>
+                            <sns.icon height={32} width={32} />
+                        </Link>
+                    ))}
+                </div>
             </div>
         </header>
     );
