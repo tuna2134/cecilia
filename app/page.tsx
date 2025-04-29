@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="mx-auto max-w-3xl px-4">
+      <div className="mt-6 mx-auto max-w-3xl px-4">
         <Timeline timeline={[
           {
             title: "プログラミングの世界に入り込む",
