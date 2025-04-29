@@ -9,9 +9,7 @@ const Header: React.FC = async () => {
             }
         }
     );
-    console.log(process.env.DISCORD_TOKEN);
     const data = await res.json();
-    console.log(data);
     const avatarURL = `https://cdn.discordapp.com/avatars/739702692393517076/${data.avatar}.png?size=1024`
     return (
         <header className="h-screen w-screen flex justify-center items-center">
