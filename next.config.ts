@@ -11,4 +11,8 @@ const nextConfig: NextConfig = {
     }
 };
 
+if (process.env.OUTPUT === "standalone") {
+    nextConfig.output = "standalone";
+}
+
 export default nextConfig;
