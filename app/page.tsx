@@ -6,6 +6,9 @@ export default function Home() {
         <>
             <Header />
             <div className="mt-6 mx-auto max-w-3xl px-4">
+                <p className="mb-2 border-l-4 border-indigo-300 pl-2 text-2xl font-bold">
+                    スキル
+                 </p>
                 <Timeline
                     timeline={[
                         {
