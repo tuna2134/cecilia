@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Github, X } from "iconoir-react";
+import { ArrowDown, Github, PageDown, X } from "iconoir-react";
 import Link from "next/link";
 
 const SNSIcons = [
@@ -41,6 +41,9 @@ const Header: React.FC = async () => {
                             <sns.icon height={32} width={32} />
                         </Link>
                     ))}
+                </div>
+                <div className="mt-6 flex justify-center">
+                    <ArrowDown className="animate-bounce" />
                 </div>
             </div>
         </header>

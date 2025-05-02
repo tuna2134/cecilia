@@ -6,7 +6,7 @@ export default function Home() {
         <>
             <Header />
             <div className="mt-6 mx-auto max-w-3xl px-4">
-                <p className="mb-3 border-b-4 border-indigo-300 pl-2 text-2xl font-bold">
+                <p className="mb-3 border-b-4 border-indigo-600 bg-indigo-600/20 p-1 text-2xl font-bold">
                     歴史
                 </p>
                 <Timeline
