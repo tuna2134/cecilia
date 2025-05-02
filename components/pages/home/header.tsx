@@ -25,7 +25,7 @@ const Header: React.FC = async () => {
     const data = await res.json();
     const avatarURL = `https://cdn.discordapp.com/avatars/739702692393517076/${data.avatar}.png?size=1024`;
     return (
-        <header className="h-screen w-screen flex justify-center items-center">
+        <header className="flex h-screen w-screen items-center justify-center">
             <div>
                 <Image
                     alt="avatar"
@@ -34,8 +34,8 @@ const Header: React.FC = async () => {
                     height={156}
                     className="mb-2 rounded-full"
                 />
-                <h1 className="text-2xl font-bold text-center">tuna2134</h1>
-                <div className="flex justify-center space-x-2 mt-2">
+                <h1 className="text-center text-2xl font-bold">tuna2134</h1>
+                <div className="mt-2 flex justify-center space-x-2">
                     {SNSIcons.map((sns, key) => (
                         <Link href={sns.url} key={key}>
                             <sns.icon height={32} width={32} />
