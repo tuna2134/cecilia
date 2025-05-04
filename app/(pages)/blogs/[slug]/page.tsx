@@ -15,10 +15,10 @@ export default async function Page({ params }: Props) {
     return (
         <>
             <div className="mb-6 rounded-lg border border-gray-300 p-2 shadow-md">
-                <h2 className="border-b-4 border-indigo-600 bg-indigo-600/20 p-1 text-2xl font-bold">
+                <h2 className="p-1 text-center text-2xl font-bold tracking-wider">
                     {metadata.title}
                 </h2>
-                <div className="mt-3 flex items-center space-x-2">
+                <div className="mt-4 flex items-center justify-center space-x-2">
                     <Timer />
                     <p>作成日時：{metadata.datetime}</p>
                 </div>
