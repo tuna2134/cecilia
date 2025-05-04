@@ -17,7 +17,7 @@ const Page: NextPage = async () => {
     return (
         <div>
             <h1 className="text-center text-2xl font-bold">ブログ一覧</h1>
-            <ul className="mt-6 grid grid-cols-2 gap-4">
+            <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {blogList.map((blog) => (
                     <li
                         key={blog.slug}
