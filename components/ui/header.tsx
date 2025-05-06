@@ -10,13 +10,7 @@ const Header: React.FC = () => {
                         Home
                     </a>
                     <a
-                        href="/about"
-                        className="text-gray-700 hover:text-gray-900"
-                    >
-                        About
-                    </a>
-                    <a
-                        href="/contact"
+                        href="/blogs"
                         className="text-gray-700 hover:text-gray-900"
                     >
                         Blog
