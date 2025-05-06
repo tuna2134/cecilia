@@ -1,9 +1,11 @@
 import Timeline from "@/components/pages/home/timeline";
 import Header from "@/components/pages/home/header";
+import * as PageHeader from "@/components/ui/header";
 
 export default function Home() {
     return (
         <>
+            <PageHeader.default />
             <Header />
             <div className="mx-auto mt-6 max-w-3xl px-4">
                 <p className="mb-3 border-b-4 border-indigo-600 bg-indigo-600/20 p-1 text-2xl font-bold">
