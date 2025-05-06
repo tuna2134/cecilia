@@ -18,12 +18,9 @@ export default async function Page({ params }: Props) {
                 <h2 className="p-1 text-center text-2xl font-bold tracking-wider">
                     {metadata.title}
                 </h2>
-                <div className="mt-4 flex items-center justify-center space-x-2">
-                    <Timer />
-                    <p>作成日時：{metadata.datetime}</p>
-                </div>
             </div>
-            <div className="prose">
+            <p className="text-gray-600/80">作成日時：{metadata.datetime}</p>
+            <div className="prose mt-2">
                 <Post />
             </div>
         </>
