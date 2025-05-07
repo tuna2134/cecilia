@@ -1,5 +1,4 @@
 import fs from "fs/promises";
-import { Timer, TimeZone } from "iconoir-react";
 
 interface PropsParams {
     slug: string;
