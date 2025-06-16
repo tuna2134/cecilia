@@ -1,0 +1,21 @@
+export const metadata = {
+    title: "WSLを吹っ飛ばした。",
+    description: "WSLのディスクが最近肥大化してきたので、吹っ飛ばします。",
+    datetime: "2025/06/16",
+};
+
+## 問題
+Next.js触ったり、Rustを触ったりしているとキャッシュとかでディスクが圧迫する。
+それらを取り除かないといけないから、リセットすることに決めた。
+
+## まずWSLを破壊
+```sh
+wsl --unregister=Ubuntu
+```
+
+## 再構築
+```sh
+wsl --install=Ubuntu
+```
+
+以上！
