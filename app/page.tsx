@@ -8,7 +8,7 @@ export default function Home() {
             <PageHeader.default />
             <Header />
             <div className="mx-auto mt-6 max-w-3xl px-4">
-                <p className="mb-3 border-b-4 border-indigo-600 bg-indigo-600/20 p-1 text-2xl font-bold">
+                <p className="mb-3 p-1 text-2xl font-bold tracking-wider">
                     歴史
                 </p>
                 <Timeline
