@@ -19,7 +19,7 @@ export default async function Page({ params }: Props) {
                 </h2>
             </div>
             <p className="text-gray-600/80">作成日時：{metadata.datetime}</p>
-            <div className="prose mt-2 w-full">
+            <div className="prose mt-2 max-w-none">
                 <Post />
             </div>
         </>
