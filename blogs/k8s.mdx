@@ -1,0 +1,31 @@
+export const metadata = {
+    title: "Kubernetes構築ansibleスクリプト",
+    description: "高可用性クラスターを簡単に構築するためのansibleスクリプトです。",
+    datetime: "2025/05/07",
+};
+
+Kubernetes構築ansibleスクリプトの使い方
+
+## 環境のセットアップ
+uvをインスコします
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+## パッケージなどをインストール
+```sh
+uv sync
+```
+
+## virtualenvに没入
+```
+source .venv/bin/activate
+```
+
+## configの変更
+`inventory`の内容をよしなに変更してね
+
+## 実行
+```
+ansible-playbook -i inventory full.yml
+```
