@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, Github, PageDown, X } from "iconoir-react";
+import { ArrowDown, Github, X } from "iconoir-react";
 import Link from "next/link";
 
 const SNSIcons = [
