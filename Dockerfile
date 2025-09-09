@@ -14,7 +14,7 @@ RUN --mount=type=cache,target=/src/.next/cache \
 
 FROM gcr.io/distroless/nodejs22-debian12
 
-ENV NODE_ENV=production
+# ENV NODE_ENV=production
 WORKDIR /usr/src
 
 COPY --chown=nonroot:nonroot ./public ./public
