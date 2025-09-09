@@ -18,8 +18,8 @@ ENV NODE_ENV=production
 WORKDIR /usr/src
 
 COPY --chown=nonroot:nonroot ./public ./public
-COPY --from=builder --chown=nonroot:nonroot /complete/standalone ./
-COPY --from=builder --chown=nonroot:nonroot /complete/static ./.next/static
+COPY --from=builder --chown=nonroot:nonroot /src/.next/standalone ./
+COPY --from=builder --chown=nonroot:nonroot /src/.next/static ./.next/static
 
 USER nonroot
 EXPOSE 3000
