@@ -9,9 +9,8 @@ COPY pnpm-lock.yaml package.json .
 RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN --mount=type=cache,target=/src/.next \
-    pnpm build \
-    && cp -r /src/.next /complete
+RUN --mount=type=cache,target=/src/.next/cache \
+    pnpm build
 
 FROM gcr.io/distroless/nodejs22-debian12
 
