@@ -52,3 +52,5 @@ const Header: React.FC = async () => {
 };
 
 export default Header;
+
+export const dynamic = "force-dynamic";
