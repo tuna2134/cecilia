@@ -14,7 +14,6 @@ const SNSIcons = [
 ];
 
 const Header: React.FC = async () => {
-    console.error(process.env);
     const res = await fetch(
         "https://discord.com/api/v10/users/739702692393517076",
         {
