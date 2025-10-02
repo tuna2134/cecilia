@@ -13,25 +13,25 @@ importers:
         version: 3.1.1
       '@mdx-js/react':
         specifier: ^3.1.0
-        version: 3.1.1(@types/react@19.1.17)(react@19.1.1)
+        version: 3.1.1(@types/react@19.2.0)(react@19.2.0)
       '@next/mdx':
         specifier: ^15.3.1
-        version: 15.5.4(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.1.17)(react@19.1.1))
+        version: 15.5.4(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.0)(react@19.2.0))
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
       iconoir-react:
         specifier: ^7.11.0
-        version: 7.11.0(react@19.1.1)
+        version: 7.11.0(react@19.2.0)
       next:
         specifier: 15.5.4
-        version: 15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        version: 15.5.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react:
         specifier: ^19.0.0
-        version: 19.1.1
+        version: 19.2.0
       react-dom:
         specifier: ^19.0.0
-        version: 19.1.1(react@19.1.1)
+        version: 19.2.0(react@19.2.0)
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -44,10 +44,10 @@ importers:
         version: 22.18.8
       '@types/react':
         specifier: ^19
-        version: 19.1.17
+        version: 19.2.0
       '@types/react-dom':
         specifier: ^19
-        version: 19.1.11(@types/react@19.1.17)
+        version: 19.2.0(@types/react@19.2.0)
       prettier:
         specifier: ^3.5.3
         version: 3.6.2
@@ -411,13 +411,13 @@ packages:
   '@types/node@22.18.8':
     resolution: {integrity: sha512-pAZSHMiagDR7cARo/cch1f3rXy0AEXwsVsVH09FcyeJVAzCnGgmYis7P3JidtTUjyadhTeSo8TgRPswstghDaw==}
 
-  '@types/react-dom@19.1.11':
-    resolution: {integrity: sha512-3BKc/yGdNTYQVVw4idqHtSOcFsgGuBbMveKCOgF8wQ5QtrYOc3jDIlzg3jef04zcXFIHLelyGlj0T+BJ8+KN+w==}
+  '@types/react-dom@19.2.0':
+    resolution: {integrity: sha512-brtBs0MnE9SMx7px208g39lRmC5uHZs96caOJfTjFcYSLHNamvaSMfJNagChVNkup2SdtOxKX1FDBkRSJe1ZAg==}
     peerDependencies:
-      '@types/react': ^19.0.0
+      '@types/react': ^19.2.0
 
-  '@types/react@19.1.17':
-    resolution: {integrity: sha512-Qec1E3mhALmaspIrhWt9jkQMNdw6bReVu64mjvhbhq2NFPftLPVr+l1SZgmw/66WwBNpDh7ao5AT6gF5v41PFA==}
+  '@types/react@19.2.0':
+    resolution: {integrity: sha512-1LOH8xovvsKsCBq1wnT4ntDUdCJKmnEakhsuoUSy6ExlHCkGP2hqnatagYTgFk6oeL0VU31u7SNjunPN+GchtA==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -912,13 +912,13 @@ packages:
   property-information@7.1.0:
     resolution: {integrity: sha512-TwEZ+X+yCJmYfL7TPUOcvBZ4QfoT5YenQiJuX//0th53DE6w0xxLEtfK3iyryQFddXuvkIk51EEgrJQ0WJkOmQ==}
 
-  react-dom@19.1.1:
-    resolution: {integrity: sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw==}
+  react-dom@19.2.0:
+    resolution: {integrity: sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==}
     peerDependencies:
-      react: ^19.1.1
+      react: ^19.2.0
 
-  react@19.1.1:
-    resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
+  react@19.2.0:
+    resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
     engines: {node: '>=0.10.0'}
 
   recma-build-jsx@1.0.0:
@@ -947,8 +947,8 @@ packages:
   remark-rehype@11.1.2:
     resolution: {integrity: sha512-Dh7l57ianaEoIpzbp0PC9UKAdCSVklD8E5Rpw7ETfbTl3FqcOOgq5q2LVDhgGCkaBv7p24JXikPdvhhmHvKMsw==}
 
-  scheduler@0.26.0:
-    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
+  scheduler@0.27.0:
+    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
   semver@7.7.2:
     resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
@@ -1215,20 +1215,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mdx-js/react@3.1.1(@types/react@19.1.17)(react@19.1.1)':
+  '@mdx-js/react@3.1.1(@types/react@19.2.0)(react@19.2.0)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.1.17
-      react: 19.1.1
+      '@types/react': 19.2.0
+      react: 19.2.0
 
   '@next/env@15.5.4': {}
 
-  '@next/mdx@15.5.4(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.1.17)(react@19.1.1))':
+  '@next/mdx@15.5.4(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.0)(react@19.2.0))':
     dependencies:
       source-map: 0.7.6
     optionalDependencies:
       '@mdx-js/loader': 3.1.1
-      '@mdx-js/react': 3.1.1(@types/react@19.1.17)(react@19.1.1)
+      '@mdx-js/react': 3.1.1(@types/react@19.2.0)(react@19.2.0)
 
   '@next/swc-darwin-arm64@15.5.4':
     optional: true
@@ -1361,11 +1361,11 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/react-dom@19.1.11(@types/react@19.1.17)':
+  '@types/react-dom@19.2.0(@types/react@19.2.0)':
     dependencies:
-      '@types/react': 19.1.17
+      '@types/react': 19.2.0
 
-  '@types/react@19.1.17':
+  '@types/react@19.2.0':
     dependencies:
       csstype: 3.1.3
 
@@ -1546,9 +1546,9 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
 
-  iconoir-react@7.11.0(react@19.1.1):
+  iconoir-react@7.11.0(react@19.2.0):
     dependencies:
-      react: 19.1.1
+      react: 19.2.0
 
   inline-style-parser@0.2.4: {}
 
@@ -1940,15 +1940,15 @@ snapshots:
 
   nanoid@3.3.11: {}
 
-  next@15.5.4(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+  next@15.5.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@next/env': 15.5.4
       '@swc/helpers': 0.5.15
       caniuse-lite: 1.0.30001715
       postcss: 8.4.31
-      react: 19.1.1
-      react-dom: 19.1.1(react@19.1.1)
-      styled-jsx: 5.1.6(react@19.1.1)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+      styled-jsx: 5.1.6(react@19.2.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.5.4
       '@next/swc-darwin-x64': 15.5.4
@@ -2000,12 +2000,12 @@ snapshots:
 
   property-information@7.1.0: {}
 
-  react-dom@19.1.1(react@19.1.1):
+  react-dom@19.2.0(react@19.2.0):
     dependencies:
-      react: 19.1.1
-      scheduler: 0.26.0
+      react: 19.2.0
+      scheduler: 0.27.0
 
-  react@19.1.1: {}
+  react@19.2.0: {}
 
   recma-build-jsx@1.0.0:
     dependencies:
@@ -2068,7 +2068,7 @@ snapshots:
       unified: 11.0.5
       vfile: 6.0.3
 
-  scheduler@0.26.0: {}
+  scheduler@0.27.0: {}
 
   semver@7.7.2:
     optional: true
@@ -2127,10 +2127,10 @@ snapshots:
     dependencies:
       inline-style-parser: 0.2.4
 
-  styled-jsx@5.1.6(react@19.1.1):
+  styled-jsx@5.1.6(react@19.2.0):
     dependencies:
       client-only: 0.0.1
-      react: 19.1.1
+      react: 19.2.0
 
   tailwindcss@4.1.13: {}
 
