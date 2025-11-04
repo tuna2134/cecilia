@@ -14,7 +14,6 @@ const SNSIcons = [
 ];
 
 const Header: React.FC = async () => {
-    console.log(process.env)
     const res = await fetch(
         "https://discord.com/api/v10/users/739702692393517076",
         {
@@ -24,6 +23,7 @@ const Header: React.FC = async () => {
         },
     );
     const data = await res.json();
+    console.log(data);
     const avatarURL = `https://cdn.discordapp.com/avatars/739702692393517076/${data.avatar}.png?size=1024`;
     return (
         <header className="flex h-screen w-screen items-center justify-center">
