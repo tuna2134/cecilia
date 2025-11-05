@@ -1,0 +1,73 @@
+export const metadata = {
+    title: "仮置き場",
+    description: "仮置き場",
+    datetime: "2025/11/06",
+};
+
+```sh
+# 1. プライベートIPアドレスのフィルター
+set policy prefix-list6 BGP-IN rule 10 action 'permit'
+set policy prefix-list6 BGP-IN rule 10 prefix '3ffe::/16'
+set policy prefix-list6 BGP-IN rule 10 le 128
+set policy prefix-list6 BGP-IN rule 20 action 'permit'
+set policy prefix-list6 BGP-IN rule 20 prefix '2001:db8::/32'
+set policy prefix-list6 BGP-IN rule 20 le 128
+set policy prefix-list6 BGP-IN rule 30 action 'permit'
+set policy prefix-list6 BGP-IN rule 30 prefix 'fe00::/8'
+set policy prefix-list6 BGP-IN rule 30 le 128
+set policy prefix-list6 BGP-IN rule 40 action 'permit'
+set policy prefix-list6 BGP-IN rule 40 prefix '::/0'
+set policy prefix-list6 BGP-IN rule 40 le 15
+set policy prefix-list6 BGP-IN rule 50 action 'permit'
+set policy prefix-list6 BGP-IN rule 50 prefix '::/128'
+set policy prefix-list6 BGP-IN rule 50 ge 128
+
+## 2. 1.のフィルターを通して、問題なかったものを許可する場所
+set policy route-map BGP-IN rule 10 action 'deny'
+set policy route-map BGP-IN rule 10 match ipv6 address prefix-list 'BGP-IN'
+set policy route-map BGP-IN rule 20 action 'permit'
+
+## 3. 広報するIP
+## `annouce-ip`: 広報する予定のIP
+set protocols static route6 <annouce-ip> blackhole distance '254'
+
+## 4. BGP接続設定(upstream用)
+## `my-asn`: 自分のASN
+## `neighbor-asn`: 相手のASN
+## `neighbor-ip`: 相手の境界IP
+## `my-border-ip`: 自分の境界IP
+## `annouce-ip`: 広報する予定のIP
+## `router-id`: ルーターID
+set protocols bgp system-as <my-asn>
+set protocols bgp neighbor <neighbor-ip> remote-as <neighbor-asn>
+set protocols bgp neighbor <neighbor-ip> update-source <my-border-ip>
+set protocols bgp neighbor <neighbor-ip> address-family ipv6-unicast route-map import 'BGP-IN'
+set protocols bgp neighbor <neighbor-ip> address-family ipv6-unicast
+set protocols bgp address-family ipv6-unicast network <annouce-ip>
+set protocols bgp parameters router-id <router-id>
+
+## 5. BGP接続設定(ほかの自分のBGPルーター)
+## 冗長化をする場合、この設定をいれるといいでしょう。
+## `my-asn`: 自分のASN
+## `neighbor-ip`: 他ルーターIP
+## `my-border-ip`: 自分のルーターIP
+set protocols bgp neighbor <neighbor-ip> remote-as <my-asn>
+set protocols bgp neighbor <neighbor-ip> update-source <my-border-ip>
+set protocols bgp neighbor <neighbor-ip> address-family ipv6-unicast
+
+## 6. IPの設定
+## `router-ip`: ルーターIP(prefixは/128)
+set interfaces lo lo address <router-ip>
+
+## 7. OSPFの設定
+## 予期せぬ事態にEthernetがダウンしたときに備えて、
+## 5.のiBGPの`my-border-ip`は6.で設定したアドレスを使いましょう。
+## `interface`: ほかのルーターに接続されているL2SW
+## `rid`: 4.で設定した`router-id`を設定してあげてください
+set protocols ospfv3 interface <interface> area 0.0.0.0
+set protocols ospfv3 interface lo area 0.0.0.0
+set protocols ospfv3 interface lo passive
+set protocols ospfv3 parameters router-id <rid>
+set protocols ospfv3 redistribute static
+set protocols ospfv3 default-information originate
+```
