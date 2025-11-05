@@ -23,7 +23,6 @@ const Header: React.FC = async () => {
         },
     );
     const data = await res.json();
-    console.log(data);
     const avatarURL = `https://cdn.discordapp.com/avatars/739702692393517076/${data.avatar}.png?size=1024`;
     return (
         <header className="flex h-screen w-screen items-center justify-center">
