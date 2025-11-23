@@ -1,0 +1,67 @@
+export const metadata = {
+    title: "TLS証明書をGoogle Trust Serviceに変えてみた",
+    description: "TLS証明書をLet's EncryptからGoogle Trust Serviceに変えてみた話",
+    datetime: "2025/11/23",
+};
+
+## 事前説明
+私はサイトをKubernetes上で動かしており、cert-managerを使ってLet's EncryptのSSL証明書を発行していました。
+
+## アカウントの発行
+```
+gcloud init
+```
+でまず環境を初期化
+
+そののち
+```
+gcloud services enable publicca.googleapis.com
+```
+でGoogle Trust Serviceを有効化
+
+次にアカウントの発行
+```
+gcloud publicca external-account-keys create
+```
+
+そうすると以下のように返される。
+```
+Created an external account key
+[b64MacKey: <eab-secret>
+keyId: <key-id>]
+```
+次の`cert-managerの例`で使うからメモしておく。
+
+keyをsecretに登録
+```sh
+kubectl create secret generic eab-secret \
+    --from-literal secret=<eab-secret> \
+    -n cert-manager
+```
+
+## cert-managerの例
+```yaml
+# issuer-lets-encrypt-staging.yaml
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: gts-prod
+spec:
+  acme:
+    server: https://dv.acme-v02.api.pki.goog/directory
+    email: hello@tuna2134.dev
+    externalAccountBinding:
+      keyID: <key-id>
+      keySecretRef:
+        name: eab-secret
+        key: secret
+    privateKeySecretRef:
+      name: example-issuer-account-key
+    solvers:
+    - http01:
+        ingress:
+          ingressClassName: nginx
+```
+
+## 最後に
+このサイトもGoogle Trust Service使っています。
