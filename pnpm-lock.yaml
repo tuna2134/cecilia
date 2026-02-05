@@ -13,10 +13,10 @@ importers:
         version: 3.1.1
       '@mdx-js/react':
         specifier: ^3.1.0
-        version: 3.1.1(@types/react@19.2.11)(react@19.2.4)
+        version: 3.1.1(@types/react@19.2.13)(react@19.2.4)
       '@next/mdx':
         specifier: ^16.0.0
-        version: 16.1.6(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.11)(react@19.2.4))
+        version: 16.1.6(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.13)(react@19.2.4))
       '@types/mdx':
         specifier: ^2.0.13
         version: 2.0.13
@@ -44,10 +44,10 @@ importers:
         version: 24.10.10
       '@types/react':
         specifier: ^19
-        version: 19.2.11
+        version: 19.2.13
       '@types/react-dom':
         specifier: ^19
-        version: 19.2.3(@types/react@19.2.11)
+        version: 19.2.3(@types/react@19.2.13)
       prettier:
         specifier: ^3.5.3
         version: 3.8.1
@@ -438,8 +438,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.11':
-    resolution: {integrity: sha512-tORuanb01iEzWvMGVGv2ZDhYZVeRMrw453DCSAIn/5yvcSVnMoUMTyf33nQJLahYEnv9xqrTNbgz4qY5EfSh0g==}
+  '@types/react@19.2.13':
+    resolution: {integrity: sha512-KkiJeU6VbYbUOp5ITMIc7kBfqlYkKA5KhEHVrGMmUUMt7NeaZg65ojdPk+FtNrBAOXNVM5QM72jnADjM+XVRAQ==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -1199,20 +1199,20 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mdx-js/react@3.1.1(@types/react@19.2.11)(react@19.2.4)':
+  '@mdx-js/react@3.1.1(@types/react@19.2.13)(react@19.2.4)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.2.11
+      '@types/react': 19.2.13
       react: 19.2.4
 
   '@next/env@16.1.6': {}
 
-  '@next/mdx@16.1.6(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.11)(react@19.2.4))':
+  '@next/mdx@16.1.6(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.13)(react@19.2.4))':
     dependencies:
       source-map: 0.7.6
     optionalDependencies:
       '@mdx-js/loader': 3.1.1
-      '@mdx-js/react': 3.1.1(@types/react@19.2.11)(react@19.2.4)
+      '@mdx-js/react': 3.1.1(@types/react@19.2.13)(react@19.2.4)
 
   '@next/swc-darwin-arm64@16.1.6':
     optional: true
@@ -1342,11 +1342,11 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/react-dom@19.2.3(@types/react@19.2.11)':
+  '@types/react-dom@19.2.3(@types/react@19.2.13)':
     dependencies:
-      '@types/react': 19.2.11
+      '@types/react': 19.2.13
 
-  '@types/react@19.2.11':
+  '@types/react@19.2.13':
     dependencies:
       csstype: 3.2.3
 
