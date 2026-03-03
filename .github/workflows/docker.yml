@@ -7,7 +7,7 @@ on:
 
 jobs:
   push-docker:
-    runs-on: ubuntu-24.04-lxc
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
