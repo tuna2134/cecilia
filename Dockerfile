@@ -6,8 +6,9 @@ ENV OUTPUT=standalone
 RUN corepack enable
 
 COPY pnpm-lock.yaml package.json .
+RUN pnpm install --frozen-lockfile --ignore-scripts
 RUN pnpm approve-builds sharp
-RUN pnpm install --frozen-lockfile
+RUN pnpm rebuild sharp
 
 COPY . .
 RUN pnpm build
