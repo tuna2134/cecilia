@@ -5,8 +5,8 @@ WORKDIR /src
 ENV OUTPUT=standalone
 RUN corepack enable
 
-RUN pnpm approve-builds
 COPY pnpm-lock.yaml package.json .
+RUN pnpm approve-builds sharp
 RUN pnpm install --frozen-lockfile
 
 COPY . .
