@@ -24,6 +24,7 @@ jobs:
     - name: Build checking
       run: |
         pnpm install --frozen-lockfile
+        pnpm approve-builds
         pnpm build
     - name: Enable auto-merge for Renovate PRs
       run: gh pr merge --auto --merge "$PR_URL"
