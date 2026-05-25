@@ -4,7 +4,7 @@ const Header: React.FC = () => {
             <small className="text-sm">tuna2134の休憩</small>
             <h1 className="text-4xl font-bold">tuna2134</h1>
         </header>
-    )
-}
+    );
+};
 
 export default Header;
