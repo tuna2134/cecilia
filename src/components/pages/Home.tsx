@@ -14,9 +14,7 @@ export const Activity: React.FC<ActivityProps> = ({ activity }) => {
     return (
         <div className="p-4 border border-gray-300 rounded-lg mb-4 flex flex-col">
             <h4 className="text-lg font-semibold">{activity.title}</h4>
-            <p className="flex-grow mb-2 text-gray-700">
-                {activity.description}
-            </p>
+            <p className="grow mb-2 text-gray-700">{activity.description}</p>
             {activity.url && (
                 <Link
                     href={activity.url}
