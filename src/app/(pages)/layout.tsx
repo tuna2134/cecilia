@@ -8,7 +8,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <>
             <Header />
-            {children}
+            <main className="flex-1 w-full max-w-3xl mx-auto px-4 py-8">
+                {children}
+            </main>
         </>
     );
 };
