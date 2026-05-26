@@ -19,7 +19,9 @@ const Home: NextPage = () => {
                     </p>
                 </div>
             </div>
-            <p>hello</p>
+            <div>
+                <h3 className="text-xl font-bold mb-4">最近の活動</h3>
+            </div>
         </>
     );
 };
