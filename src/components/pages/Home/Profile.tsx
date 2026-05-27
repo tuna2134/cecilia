@@ -1,4 +1,6 @@
+import { Github, Twitter } from "iconoir-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Profile: React.FC = () => {
     return (
@@ -15,6 +17,14 @@ export const Profile: React.FC = () => {
                 <p>
                     はじめまして、tuna2134です。サーバーをいじったりするのが楽しいと思っている人間です！
                 </p>
+                <div className="mt-4 flex items-center gap-2">
+                    <Link href="https://x.com/fdc_tuna2134">
+                        <Twitter />
+                    </Link>
+                    <Link href="https://github.com/tuna2134">
+                        <Github />
+                    </Link>
+                </div>
             </div>
         </div>
     );
