@@ -18,6 +18,11 @@ const activities: ActivityData[] = [
         description: "AS152873をはじめインフラをメインで運用しています。",
         url: "https://neody.ad.jp",
     },
+    {
+        title: "EtherIP",
+        description: "RustでRFC3378であるEtherIPを実装しました。",
+        url: "https://github.com/tuna2134/EtherIP",
+    },
 ];
 
 const Home: NextPage = () => {
