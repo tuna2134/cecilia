@@ -1,0 +1,27 @@
+FROM node:24-slim AS builder
+
+WORKDIR /src
+
+ENV OUTPUT=standalone
+RUN corepack enable
+
+COPY pnpm-lock.yaml package.json .
+RUN pnpm install --frozen-lockfile --ignore-scripts
+RUN pnpm approve-builds sharp
+RUN pnpm rebuild sharp
+
+COPY . .
+RUN pnpm build
+
+FROM gcr.io/distroless/nodejs24-debian12
+
+# ENV NODE_ENV=production
+WORKDIR /usr/src
+
+COPY --chown=nonroot:nonroot ./public ./public
+COPY --from=builder --chown=nonroot:nonroot /src/.next/standalone ./
+COPY --from=builder --chown=nonroot:nonroot /src/.next/static ./.next/static
+
+USER nonroot
+EXPOSE 3000
+CMD ["server.js"]
