@@ -1,4 +1,4 @@
-import { Github, Twitter } from "iconoir-react";
+import { Github, Mail, Twitter } from "iconoir-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,6 +23,9 @@ export const Profile: React.FC = () => {
                     </Link>
                     <Link href="https://github.com/tuna2134">
                         <Github />
+                    </Link>
+                    <Link href="mailto:m-kikuchi@tuna2134.dev">
+                        <Mail />
                     </Link>
                 </div>
             </div>
