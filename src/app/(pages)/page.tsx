@@ -1,6 +1,6 @@
 import { NextPage, Metadata } from "next";
-import Image from "next/image";
-import { Activity, ActivityData } from "@/components/pages/Home";
+import { Activity, ActivityData } from "@/components/pages/Home/Activity";
+import { Profile } from "@/components/pages/Home/Profile";
 
 export const metadata: Metadata = {
     title: "ホーム",
@@ -23,21 +23,7 @@ const activities: ActivityData[] = [
 const Home: NextPage = () => {
     return (
         <>
-            <div className="w-full flex items-center gap-4 py-8">
-                <Image
-                    src="/images/icon.png"
-                    alt="icon"
-                    width={128}
-                    height={128}
-                    className="rounded-full"
-                />
-                <div>
-                    <h2 className="text-2xl font-bold">こんにちは！</h2>
-                    <p>
-                        はじめまして、tuna2134です。サーバーをいじったりするのが楽しいと思っている人間です！
-                    </p>
-                </div>
-            </div>
+            <Profile />
             <div>
                 <h3 className="text-xl font-bold mb-4">最近の活動</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
