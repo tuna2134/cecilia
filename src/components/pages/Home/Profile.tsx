@@ -16,6 +16,7 @@ export const Profile: React.FC = () => {
                 <h2 className="text-2xl font-bold">こんにちは！</h2>
                 <p>
                     はじめまして、tuna2134です。サーバーをいじったりするのが楽しいと思っている人間です！
+                    主にAS152873を運用しています。このサイトはAS152873のインフラで動いています。
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                     <Link href="https://x.com/fdc_tuna2134">
