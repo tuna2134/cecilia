@@ -10,7 +10,7 @@ importers:
     dependencies:
       iconoir-react:
         specifier: ^7.11.0
-        version: 7.12.1(react@19.3.1)
+        version: 7.12.2(react@19.3.1)
       next:
         specifier: 16.4.1
         version: 16.4.1(@types/node@25.9.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -623,8 +623,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  iconoir-react@7.12.1:
-    resolution: {integrity: sha512-e+Lwgqr10ruCwrCrFjG5RD0axwENFxPzLP1cESiQPEMH9UC/W6dk6u0MYwLoG0MBVsmBYAhVBb5GqO1aSljeGQ==}
+  iconoir-react@7.12.2:
+    resolution: {integrity: sha512-BDOIt6qcGY4pgJ+5et2ZjuWEbVKwnpRyTLq7viN3bF+BzpxVWCNDBkMd8iVeHx+QglqciiS8ftgU5Ddvz0Rn6A==}
     peerDependencies:
       react: 18 || 19
 
@@ -1186,7 +1186,7 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  iconoir-react@7.12.1(react@19.3.1):
+  iconoir-react@7.12.2(react@19.3.1):
     dependencies:
       react: 19.3.1
 
