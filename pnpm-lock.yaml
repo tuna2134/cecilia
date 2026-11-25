@@ -13,7 +13,7 @@ importers:
         version: 7.12.1(react@19.3.1)
       next:
         specifier: 16.4.1
-        version: 16.4.1(@types/node@25.9.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        version: 16.4.1(@types/node@25.9.12)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       react:
         specifier: 19.3.1
         version: 19.3.1
@@ -29,7 +29,7 @@ importers:
         version: 4.3.3
       '@types/node':
         specifier: ^25
-        version: 25.9.9
+        version: 25.9.12
       '@types/react':
         specifier: ^19
         version: 19.3.0
@@ -464,8 +464,8 @@ packages:
   '@tailwindcss/postcss@4.3.3':
     resolution: {integrity: sha512-JTSZZGQi1AyKirbLN3azmjVzef92tcX7h+iSqPdaeStyFpGpDlKvvpxeOE8njhbUanbRwr3z8DyzhICWnMtQeg==}
 
-  '@types/node@25.9.9':
-    resolution: {integrity: sha512-b4e2xxj/yMeT2hNlD6x7zNFiQK2Dlmkb9CQ6v3/1G2RezKN4YS2lcEv8lzGm1mhs4f2lM4yNAMI/zUDBZBBt7w==}
+  '@types/node@25.9.12':
+    resolution: {integrity: sha512-49uWGmIcvfuuEnFIm83Pn7MGcDvdY8UQ3v3DF4O0ouWbElWTaT/HudacSntQwFrnLAgiMoKtXEVV5dFC+DZ2cQ==}
 
   '@types/react-dom@19.3.0':
     resolution: {integrity: sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==}
@@ -1093,7 +1093,7 @@ snapshots:
       postcss: 8.5.26
       tailwindcss: 4.3.3
 
-  '@types/node@25.9.9':
+  '@types/node@25.9.12':
     dependencies:
       undici-types: 7.24.6
 
@@ -1247,7 +1247,7 @@ snapshots:
 
   nanoid@3.3.18: {}
 
-  next@16.4.1(@types/node@25.9.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
+  next@16.4.1(@types/node@25.9.12)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       '@next/env': 16.4.1
       '@swc/helpers': 0.5.23
@@ -1267,7 +1267,7 @@ snapshots:
       '@next/swc-win32-arm64-msvc': 16.4.1
       '@next/swc-win32-x64-msvc': 16.4.1
       babel-plugin-react-compiler: 1.0.0
-      sharp: 0.35.5(@types/node@25.9.9)
+      sharp: 0.35.5(@types/node@25.9.12)
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/node'
@@ -1299,7 +1299,7 @@ snapshots:
   semver@7.8.5:
     optional: true
 
-  sharp@0.35.5(@types/node@25.9.9):
+  sharp@0.35.5(@types/node@25.9.12):
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
@@ -1330,7 +1330,7 @@ snapshots:
       '@img/sharp-win32-arm64': 0.35.5
       '@img/sharp-win32-ia32': 0.35.5
       '@img/sharp-win32-x64': 0.35.5
-      '@types/node': 25.9.9
+      '@types/node': 25.9.12
     optional: true
 
   source-map-js@1.2.1: {}
